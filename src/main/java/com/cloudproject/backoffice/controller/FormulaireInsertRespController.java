@@ -24,7 +24,6 @@ public class FormulaireInsertRespController {
         ResponsableRegion responsableRegion=new ResponsableRegion();
         modelMap.addAttribute("ResponsableRegion",responsableRegion);
         modelMap.addAttribute("ListRegion",regionService.getRegion());
-        int tsisy=0;
         return "FormRespRegion";
     }
 }
