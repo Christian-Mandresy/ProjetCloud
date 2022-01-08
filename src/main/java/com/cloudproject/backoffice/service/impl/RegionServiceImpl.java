@@ -22,7 +22,6 @@ public class RegionServiceImpl implements RegionService {
     public List<Region> getRegion(){
         List<Region> valiny=new ArrayList<Region>();
         valiny=(List<Region>)regionDao.getRegion();
-        int tsisy=0;
         return valiny;
     }
 }
