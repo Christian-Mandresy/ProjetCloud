@@ -329,3 +329,33 @@ insert into Region values(null,"Diana"),
                          (null,"Menabe"),
                          (null,"Atsimo-Andrefana"),
                          (null,"Androy");
+
+
+-- nombre de signalement par type
+CREATE VIEW SignalementParType
+as select typ.IdType,typ.NomType,(select count(sign.IdType) from signalement as sign where sign.IdType=typ.IdType)as nombreSignalement
+from typesignalement as typ;
+
+-- nombre de signalement par region
+create view SignalementParRegion as
+select *,(select count(IdRegion) from signalementregion as sign where sign.IdRegion=reg.IdRegion)as nombreSignalement
+from region as reg;
+
+-- vue join signalementRegion  with Signalment
+create view SignalEtRegion as
+select DISTINCT sig.IdSignalement, IdUtilisateur, IdType, IdStatus, DescriptionSignalement, Longitude, Latitude, DateHeureSignalement,sigR.IdRegion,region.NomRegion
+from signalement as sig
+         INNER JOIN  signalementregion as sigR on sig.IdSignalement=sigR.IdSignalement
+         inner join region on sigR.IdRegion=region.IdRegion group by sig.IdSignalement,sigR.IdRegion;
+
+-- vue NombreSignalement par type et par region
+create view SignParTypeRegion as
+select *,
+       (select count(*) from SignalEtRegion as sr where sr.IdType=typ.IdType and sr.IdRegion=reg.IdRegion )as nombre
+from region as reg,typesignalement as typ;
+
+-- vue NombreSignalement par etat et par region
+create view SignParEtatRegion as
+select *,
+       (select count(*) from SignalEtRegion as sr where sr.IdStatus=statut.IdStatus and sr.IdRegion=reg.IdRegion )as nombre
+from region as reg,StatusSignalement as statut;
