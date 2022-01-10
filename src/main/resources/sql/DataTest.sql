@@ -91,6 +91,90 @@ CREATE TABLE Signalement(
                             FOREIGN KEY(IdStatus) REFERENCES StatusSignalement(IdStatus)
 );
 
+create table SignalementRegion(
+    IdSignalement INTEGER not null,
+    IdRegion INTEGER not null,
+    DateAffectation DATETIME,
+    PRIMARY KEY (IdSignalement,IdRegion)
+);
+
+
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (1,21,"2021-05-23 05:30:58");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (2,6,"2021-09-04 06:35:48");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (3,8,"2022-08-02 18:41:35");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (4,10,"2022-06-02 11:10:15");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (5,18,"2021-12-23 15:11:31");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (6,1,"2021-02-25 00:59:46");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (7,22,"2022-05-16 03:41:35");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (8,1,"2021-03-21 14:49:46");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (9,20,"2021-02-26 09:21:14");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (10,10,"2022-08-12 17:18:33");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (11,8,"2022-09-06 23:39:08");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (12,17,"2022-03-13 12:06:16");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (13,19,"2021-03-14 23:17:34");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (14,9,"2021-04-11 09:42:48");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (15,15,"2021-08-01 01:26:06");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (16,16,"2022-06-28 18:47:50");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (17,1,"2022-05-23 06:15:43");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (18,8,"2021-06-28 19:47:12");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (19,8,"2022-06-21 02:45:12");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (20,15,"2022-07-13 07:58:48");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (21,2,"2021-04-02 17:13:55");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (22,21,"2022-08-02 00:15:14");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (23,13,"2022-02-05 00:04:54");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (24,6,"2022-07-20 19:48:41");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (25,16,"2021-11-11 05:38:56");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (26,16,"2021-12-29 16:59:22");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (27,4,"2022-10-20 18:28:03");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (28,20,"2022-07-15 20:58:09");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (29,6,"2021-08-22 00:57:22");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (30,14,"2021-11-18 20:33:57");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (31,5,"2021-07-21 12:21:33");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (32,17,"2022-06-03 02:06:22");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (33,22,"2023-01-02 05:17:57");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (34,1,"2022-12-03 12:37:50");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (35,1,"2021-06-30 13:26:24");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (36,11,"2022-01-15 09:49:49");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (37,20,"2021-07-26 09:31:26");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (38,18,"2021-06-18 20:02:08");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (39,12,"2021-03-31 12:31:28");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (40,4,"2022-03-28 07:15:06");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (41,11,"2021-08-25 20:26:18");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (42,19,"2021-12-22 03:04:35");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (43,1,"2021-09-04 01:32:05");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (44,13,"2022-07-26 17:23:20");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (45,16,"2021-10-28 16:01:28");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (46,20,"2021-02-12 04:18:06");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (47,18,"2021-03-01 08:04:50");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (48,11,"2022-04-21 15:16:46");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (49,5,"2021-03-03 12:58:13");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (50,7,"2022-10-10 04:12:32");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (51,3,"2021-06-05 02:25:12");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (52,9,"2021-02-24 11:58:12");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (53,14,"2022-02-17 15:37:40");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (54,11,"2022-06-26 02:21:30");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (55,11,"2022-04-04 05:55:49");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (56,16,"2022-02-08 18:59:27");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (57,6,"2022-04-18 17:57:00");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (58,12,"2021-07-07 01:18:09");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (59,20,"2021-11-12 15:32:49");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (60,17,"2021-12-22 11:10:19");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (61,3,"2022-06-25 01:50:30");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (62,4,"2023-01-01 06:55:43");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (63,8,"2021-08-26 13:44:19");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (64,11,"2021-08-28 13:07:23");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (65,2,"2022-02-17 09:44:11");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (66,2,"2022-11-05 01:24:18");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (67,7,"2022-04-22 04:57:23");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (68,22,"2022-01-25 19:42:02");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (69,2,"2022-08-02 01:22:27");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (70,21,"2021-05-10 07:30:30");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (71,18,"2022-10-22 11:45:39");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (72,11,"2022-06-19 14:46:22");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (73,16,"2021-10-08 14:17:25");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (74,10,"2022-07-18 10:25:22");
+INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (75,20,"2021-09-07 05:53:03");
+
 
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (36,3,1,"scelerisque scelerisque dui. Suspendisse ac metus vitae velit egestas lacinia.","-168.55664","-43.22867","2021-04-11 16:33:52");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (7,1,1,"luctus, ipsum leo elementum sem, vitae aliquam eros turpis non","133.67151","-56.5003","2021-02-25 23:12:17");
