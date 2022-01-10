@@ -8,23 +8,23 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.validation.BindingResult;
 import javax.validation.Valid;
+import java.util.Map;
 
 @Controller
 public class FormulaireInsertRespController {
     private RegionServiceImpl regionService;
-
     @Autowired
     public void setRegionService(RegionServiceImpl regionService) {
         this.regionService = regionService;
     }
 
+
     @RequestMapping("/formRespRegion")
-    public String initForm(ModelMap modelMap)
+    public String initForm(Map<String, Object> modelMap)
     {
         ResponsableRegion responsableRegion=new ResponsableRegion();
-        modelMap.addAttribute("ResponsableRegion",responsableRegion);
-        modelMap.addAttribute("ListRegion",regionService.getRegion());
-        int tsisy=0;
+        modelMap.put("ResponsableRegion",responsableRegion);
+        modelMap.put("ListRegion",regionService.getRegion());
         return "FormRespRegion";
     }
 }
