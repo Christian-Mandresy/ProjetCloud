@@ -330,6 +330,11 @@ insert into Region values(null,"Diana"),
                          (null,"Atsimo-Andrefana"),
                          (null,"Androy");
 
+create view SignalEtRegion as
+select DISTINCT sig.IdSignalement, IdUtilisateur, IdType, IdStatus, DescriptionSignalement, Longitude, Latitude, DateHeureSignalement,sigR.IdRegion,region.NomRegion
+from signalement as sig
+         INNER JOIN  signalementregion as sigR on sig.IdSignalement=sigR.IdSignalement
+         inner join region on sigR.IdRegion=region.IdRegion group by sig.IdSignalement,sigR.IdRegion;
 
 -- nombre de signalement par type
 CREATE VIEW SignalementParType
