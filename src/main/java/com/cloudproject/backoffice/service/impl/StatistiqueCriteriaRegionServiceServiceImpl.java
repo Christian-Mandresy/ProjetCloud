@@ -22,4 +22,10 @@ public class StatistiqueCriteriaRegionServiceServiceImpl implements StatistiqueC
     {
         return statistiqueCriteriaRegionDao.rechercher(type,etat,region,dateDeb,dateFin);
     }
+
+    @Override
+    public List find(int type, int etat, String region, Date dateDeb, Date dateFin)
+    {
+        return statistiqueCriteriaRegionDao.rechercherCritere(type,etat,region,dateDeb,dateFin);
+    }
 }
