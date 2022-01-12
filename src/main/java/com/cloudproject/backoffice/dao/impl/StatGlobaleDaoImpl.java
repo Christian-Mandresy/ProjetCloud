@@ -24,7 +24,7 @@ public class StatGlobaleDaoImpl implements StatGlobaleDao {
         Session session = this.sessionFactory.openSession();
         try {
             SQLQuery query= session.createSQLQuery("select * from signalementparregion")
-                    .addEntity(StatistiqueCriteriaRegion.class);
+                    .addEntity(StatGlobale.class);
             List region = session.createCriteria(StatGlobale.class).list();
             return region;
         } catch (Exception e) {
@@ -40,7 +40,7 @@ public class StatGlobaleDaoImpl implements StatGlobaleDao {
         Session session = this.sessionFactory.openSession();
         try {
             SQLQuery query= session.createSQLQuery("select * from signalementpartype")
-                    .addEntity(StatistiqueCriteriaRegion.class);
+                    .addEntity(StatGlobale.class);
             List type = session.createCriteria(StatGlobale.class).list();
             return type;
         } catch (Exception e) {
