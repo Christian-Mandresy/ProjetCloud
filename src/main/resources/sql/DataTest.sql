@@ -338,13 +338,18 @@ from signalement as sig
 
 -- nombre de signalement par type
 CREATE VIEW SignalementParType
-as select typ.IdType,typ.NomType,(select count(sign.IdType) from signalement as sign where sign.IdType=typ.IdType)as nombreSignalement
+as
+select typ.IdType as Id,typ.NomType as Nom,(select count(sign.IdType) from signalement as sign where sign.IdType=typ.IdType)as Nombre
 from typesignalement as typ;
 
 -- nombre de signalement par region
 create view SignalementParRegion as
-select *,(select count(IdRegion) from signalementregion as sign where sign.IdRegion=reg.IdRegion)as nombreSignalement
+select reg.IdRegion as Id, NomRegion as Nom,(select count(IdRegion) from signalementregion as sign where sign.IdRegion=reg.IdRegion)as Nombre
 from region as reg;
+
+create view SignalementParStatus as
+select status.IdStatus as Id, NomStatus as Nom,(select count(IdSignalement) from signalement as sign where sign.IdStatus=status.IdStatus)as Nombre
+from StatusSignalement as status;
 
 -- vue join signalementRegion  with Signalment
 create view SignalEtRegion as
@@ -364,3 +369,8 @@ create view SignParEtatRegion as
 select *,
        (select count(*) from SignalEtRegion as sr where sr.IdStatus=statut.IdStatus and sr.IdRegion=reg.IdRegion )as nombre
 from region as reg,StatusSignalement as statut;
+
+
+-- entite pour le mappage des statistique multi critère
+create view StatistiqueCriteriaRegion as
+select *,count(IdSignalement)as Nombre from SignalEtRegion group by IdRegion;
