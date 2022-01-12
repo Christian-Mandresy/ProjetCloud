@@ -45,3 +45,63 @@
     <button type="submit">Valider</button>
 
 </sf:form>
+
+<Div>
+    <h3>Statistique globale Region</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Region</th>
+            <th scope="col">Nombre de Signalement</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${requestScope.ListStatRegion}" var="lists">
+            <tr>
+                <td>${ListRegion.get(lists.getId()-1).getNomRegion()}</td>
+                <td>${lists.getNombre()}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+</Div>
+
+<Div>
+    <h3>Statistique globale par Type</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Nombre de Signalement</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${requestScope.ListStatType}" var="lists">
+            <tr>
+                <td>${ListType.get(lists.getId()-1).getNomType()}</td>
+                <td>${lists.getNombre()}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+</Div>
+
+<Div>
+    <h3>Statistique globale par Status</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Status</th>
+            <th scope="col">Nombre de Signalement</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${requestScope.ListStatStatus}" var="lists">
+            <tr>
+                <td>${ListStatus.get(lists.getId()-1).getNomStatus()}</td>
+                <td>${lists.getNombre()}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+</Div>
