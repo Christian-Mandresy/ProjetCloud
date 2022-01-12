@@ -70,11 +70,19 @@ public class StatistiqueController {
         List ListRegion=regionService.getRegion();
         Date TdateDeb=new Date();
         Date TdateFin=new Date();
-        try {
-            TdateDeb=new SimpleDateFormat("yyyy-MM-dd").parse(dateDeb);
-            TdateFin=new SimpleDateFormat("yyyy-MM-dd").parse(dateFin);
-        } catch (ParseException e) {
-            e.printStackTrace();
+        if(dateDeb.equals("")==true)
+        {
+            TdateDeb=null;
+            TdateFin=null;
+        }
+        else
+        {
+            try {
+                TdateDeb=new SimpleDateFormat("yyyy-MM-dd").parse(dateDeb);
+                TdateFin=new SimpleDateFormat("yyyy-MM-dd").parse(dateFin);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
         List Stat=statistiqueCriteriaRegionService.getStat(typenum,
                 statusnum,region,TdateDeb,TdateFin);
