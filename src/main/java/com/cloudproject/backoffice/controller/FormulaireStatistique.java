@@ -2,6 +2,7 @@ package com.cloudproject.backoffice.controller;
 
 import com.cloudproject.backoffice.model.StatistiqueCriteriaRegion;
 import com.cloudproject.backoffice.service.RegionService;
+import com.cloudproject.backoffice.service.StatGlobaleService;
 import com.cloudproject.backoffice.service.StatusService;
 import com.cloudproject.backoffice.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class FormulaireStatistique {
     private TypeService typeService;
     private StatusService statusService;
     private RegionService regionService;
+    private StatGlobaleService statGlobaleService;
 
     @Autowired
     public void setTypeService(TypeService typeService) {
@@ -31,6 +33,11 @@ public class FormulaireStatistique {
         this.regionService = regionService;
     }
 
+    @Autowired
+    public void setStatGlobaleService(StatGlobaleService statGlobaleService) {
+        this.statGlobaleService = statGlobaleService;
+    }
+
     @RequestMapping("/FormStatistique")
     public String initForm(Map<String, Object> modelMap)
     {
@@ -39,6 +46,9 @@ public class FormulaireStatistique {
         modelMap.put("ListRegion",regionService.getRegion());
         modelMap.put("ListType",typeService.geType());
         modelMap.put("ListStatus",statusService.getStatus());
+        modelMap.put("ListStatRegion",statGlobaleService.getStatRegion());
+        modelMap.put("ListStatType",statGlobaleService.getStatType());
+        modelMap.put("ListStatStatus",statGlobaleService.getStatStatus());
         return "FormStat";
     }
 }
