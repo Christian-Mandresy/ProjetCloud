@@ -54,7 +54,7 @@ public class StatGlobaleDaoImpl implements StatGlobaleDao {
         Session session = this.sessionFactory.openSession();
         try {
             SQLQuery query= session.createSQLQuery("select * from signalementparstatus")
-                    .addEntity(StatistiqueCriteriaRegion.class);
+                    .addEntity(StatGlobale.class);
             return query.list();
         } catch (Exception e) {
             throw e;
