@@ -25,8 +25,7 @@ public class StatGlobaleDaoImpl implements StatGlobaleDao {
         try {
             SQLQuery query= session.createSQLQuery("select * from signalementparregion")
                     .addEntity(StatGlobale.class);
-            List region = session.createCriteria(StatGlobale.class).list();
-            return region;
+            return query.list();
         } catch (Exception e) {
             throw e;
         } finally {
@@ -41,8 +40,7 @@ public class StatGlobaleDaoImpl implements StatGlobaleDao {
         try {
             SQLQuery query= session.createSQLQuery("select * from signalementpartype")
                     .addEntity(StatGlobale.class);
-            List type = session.createCriteria(StatGlobale.class).list();
-            return type;
+            return query.list();
         } catch (Exception e) {
             throw e;
         } finally {
@@ -57,8 +55,7 @@ public class StatGlobaleDaoImpl implements StatGlobaleDao {
         try {
             SQLQuery query= session.createSQLQuery("select * from signalementparstatus")
                     .addEntity(StatistiqueCriteriaRegion.class);
-            List status = session.createCriteria(StatGlobale.class).list();
-            return status;
+            return query.list();
         } catch (Exception e) {
             throw e;
         } finally {
