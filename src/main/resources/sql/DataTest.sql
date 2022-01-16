@@ -358,19 +358,11 @@ from signalement as sig
          INNER JOIN  signalementregion as sigR on sig.IdSignalement=sigR.IdSignalement
          inner join region on sigR.IdRegion=region.IdRegion group by sig.IdSignalement,sigR.IdRegion;
 
--- vue NombreSignalement par type et par region
-create view SignParTypeRegion as
-select *,
-       (select count(*) from SignalEtRegion as sr where sr.IdType=typ.IdType and sr.IdRegion=reg.IdRegion )as nombre
-from region as reg,typesignalement as typ;
-
--- vue NombreSignalement par etat et par region
-create view SignParEtatRegion as
-select *,
-       (select count(*) from SignalEtRegion as sr where sr.IdStatus=statut.IdStatus and sr.IdRegion=reg.IdRegion )as nombre
-from region as reg,StatusSignalement as statut;
-
 
 -- entite pour le mappage des statistique multi critère
 create view StatistiqueCriteriaRegion as
 select *,count(IdSignalement)as Nombre from SignalEtRegion group by IdRegion;
+
+create view NonAssigner as
+select DISTINCT sig.IdSignalement, IdUtilisateur, IdType, IdStatus, DescriptionSignalement, Longitude, Latitude, DateHeureSignalement
+from signalement as sig where sig.IdSignalement not in (select sigr.IdSignalement from SignalEtRegion sigr);
