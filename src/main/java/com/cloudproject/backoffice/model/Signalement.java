@@ -1,6 +1,10 @@
 package com.cloudproject.backoffice.model;
 
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.sql.Timestamp;
+import java.util.Date;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,16 +15,46 @@ import java.sql.Timestamp;
  *
  * @author samko
  */
+@Entity
+@Table(name = "Signalement")
+@XmlRootElement(name = "signalement")
 public class Signalement {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @XmlElement
+    @Column(name = "IdSignalement")
     private Integer IdSignalement;
+
+
+    @XmlElement
+    @Column(name = "IdUtilisateur")
     private Integer IdUtilisateur;
+
+    @XmlElement
+    @Column(name = "IdType")
     private Integer IdType;
+
+    @XmlElement
+    @Column(name = "IdStatus")
     private Integer IdStatus;
+
+    @XmlElement
+    @Column(name = "DescriptionSignalement")
     private String DescriptionSignalement;
+
+    @XmlElement
+    @Column(name = "Longitude")
     private float Longitude;
+
+    @XmlElement
+    @Column(name = "Latitude")
     private float Latitude;
-    private Timestamp DateHeureSignalement;
+
+    @XmlElement
+    @Column(name = "DateHeureSignalement")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date DateHeureSignalement;
 
     public Signalement() {
 
@@ -93,12 +127,11 @@ public class Signalement {
         this.Latitude = Latitude;
     }
 
-    public Timestamp getDateHeureSignalement() {
+    public Date getDateHeureSignalement() {
         return DateHeureSignalement;
     }
 
-    public void setDateHeureSignalement(Timestamp DateHeureSignalement) {
-        this.DateHeureSignalement = DateHeureSignalement;
+    public void setDateHeureSignalement(Date dateHeureSignalement) {
+        DateHeureSignalement = dateHeureSignalement;
     }
-
 }

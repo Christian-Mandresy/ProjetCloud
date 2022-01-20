@@ -4,25 +4,9 @@
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<sf:form method="POST" modelAttribute="ResponsableRegion" action="http://localhost:8080/backoffice_war/insertResp">
-    <select name="idRegion" id="" <sf:input path="IdRegion"/> >
-    <c:forEach items="${requestScope.ListRegion}" var="lists">
-        <option value="${lists.getIdRegion()}"> ${lists.getNomRegion()} </option>
-    </c:forEach>
-    </select>
-
+<sf:form method="POST" modelAttribute="Utilisateur" action="http://localhost:8080/backoffice_war_exploded/Login">
     <fieldset>
         <table>
-            <tr>
-                <td>Nom :</td>
-                <td><sf:input path="Nom" /><br/>
-                    <sf:errors path="Nom"/></td>
-            </tr>
-            <tr>
-                <td>Prénom :</td>
-                <td><sf:input path="Prenom" /><br/>
-                    <sf:errors path="Prenom"/></td>
-            </tr>
             <tr>
                 <td>Email :</td>
                 <td><sf:input path="Email" /><br/>
@@ -39,5 +23,5 @@
             </tr>
         </table>
     </fieldset>
-    <div style="color: lawngreen"> <c:out value="${ success }"></c:out> </div>
+    <div style="color: red"> <c:out value="${ erreur }"></c:out> </div>
 </sf:form>

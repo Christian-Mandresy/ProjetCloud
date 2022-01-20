@@ -1,5 +1,8 @@
 package com.cloudproject.backoffice.model;
 
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 /*
@@ -11,15 +14,36 @@ import java.sql.Timestamp;
  *
  * @author samko
  */
+@Entity
+@Table(name = "Utilisateur")
 public class Utilisateur {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "IdUtilisateur")
     private Integer IdUtilisateur;
+
+    @Column(name = "Nom")
     private String Nom;
+
+    @Column(name = "Prenom")
     private String Prenom;
+
+    @Column(name = "DateNaissance")
     private Timestamp DateNaissance;
+
+    @NotBlank
+    @Column(name = "Email")
     private String Email;
+
+    @NotBlank
+    @Column(name = "MotDePasse")
     private String MotDePasse;
+
+    @Column(name = "Sexe")
     private String Sexe;
+
+    @Column(name = "Contact")
     private String Contact;
 
     public Utilisateur() {

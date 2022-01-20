@@ -11,7 +11,7 @@ public class DataSourceConf {
         @Bean
         public DataSource getDataSource() {
             DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-            dataSourceBuilder.driverClassName("com.mysql.jdbc.Driver");
+            dataSourceBuilder.driverClassName("com.mysql.cj.jdbc.Driver");
             dataSourceBuilder.url("jdbc:mysql://localhost:3306/cloud");
             dataSourceBuilder.username("root");
             dataSourceBuilder.password("");
