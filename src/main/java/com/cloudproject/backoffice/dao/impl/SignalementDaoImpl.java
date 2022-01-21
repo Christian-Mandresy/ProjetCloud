@@ -85,4 +85,22 @@ public class SignalementDaoImpl implements SignalementDao {
         }
     }
 
+    @Override
+    public List getSignUser(int idUser)
+    {
+        Session session = this.sessionFactory.openSession();
+        try{
+            Criteria criteria = session.createCriteria(Signalement.class);
+            Criterion critere = Restrictions.eq("IdUtilisateur", idUser);
+            criteria.add(critere);
+            List sign = criteria.list();
+            return sign;
+        }catch (Exception e)
+        {
+            throw e;
+        }finally {
+            session.close();
+        }
+    }
+
 }

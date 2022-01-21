@@ -47,6 +47,13 @@ public class SignalementRestController {
         return new ResponseEntity<Collection<Signalement>>(signal, HttpStatus.FOUND);
     }
 
+    @GetMapping(value = "/signalements/user/{IdUser}")
+    public ResponseEntity<Collection<Signalement>> getSignUser(@PathVariable("IdUser") String Id) {
+        int IdRegion=Integer.parseInt(Id);
+        Collection<Signalement> signal = signalementService.getSignUser(IdRegion);
+        return new ResponseEntity<Collection<Signalement>>(signal, HttpStatus.FOUND);
+    }
+
     @GetMapping(value = "/signalements/filtre")
     public ResponseEntity<Collection<StatistiqueCriteriaRegion>> RechercheAvance(@RequestParam Map<String,String> allParams) {
 

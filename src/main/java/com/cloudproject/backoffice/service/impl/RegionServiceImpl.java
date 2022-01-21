@@ -24,4 +24,9 @@ public class RegionServiceImpl implements RegionService {
         valiny=(List<Region>)regionDao.getRegion();
         return valiny;
     }
+
+    public Region getByName(String name)
+    {
+        return regionDao.getByRegionName(name);
+    }
 }

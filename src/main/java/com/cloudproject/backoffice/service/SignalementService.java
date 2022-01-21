@@ -12,4 +12,6 @@ public interface SignalementService {
     Signalement getSign(int id);
 
     List getSignRegion(int Id);
+
+    List getSignUser(int IdUser);
 }

@@ -40,4 +40,7 @@ public class SignalementServiceImpl implements SignalementService {
     {
         return signalementDao.getSignRegion(Id);
     }
+
+    @Override
+    public List getSignUser(int IdUser){ return signalementDao.getSignUser(IdUser);}
 }
