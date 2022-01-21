@@ -66,6 +66,10 @@ public class AssignementController {
         Map<String, String> vars = new HashMap<String, String>();
         vars.put("Long",request.getParameter("Long"));
         vars.put("Lat",request.getParameter("Lat"));
+        String Long="49.905384422883465";
+        String Lat="-14.879851813636995";
+        vars.put("Long",Long);
+        vars.put("Lat",Lat);
         int Id=Integer.parseInt(request.getParameter("Id"));
         String result = restTemplate
                 .getForObject(
@@ -86,6 +90,15 @@ public class AssignementController {
 
         int inty=0;
         return "AssignSignalement";
+    }
+
+    @RequestMapping(value = "/InsertSign" , method = RequestMethod.GET)
+    public String AjoutRegion(Model model, HttpServletRequest request)
+    {
+        String region=request.getParameter("NomRegion");
+        int IdSignalement=Integer.parseInt(request.getParameter("IdSignalement"));
+
+        return "Assigner";
     }
 
 
