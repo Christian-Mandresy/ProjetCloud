@@ -1,42 +1,51 @@
 package com.cloudproject.backoffice.dao.impl;
 
 import com.cloudproject.backoffice.dao.RegionDao;
-import com.cloudproject.backoffice.mapper.RegionMapper;
 import com.cloudproject.backoffice.model.Region;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
 @Repository("regionDao")
-public class RegionDaoImpl extends JdbcDaoSupport implements RegionDao {
+@Transactional
+public class RegionDaoImpl implements RegionDao {
     @Autowired
-    public RegionDaoImpl(DataSource dataSource) {
-        this.setDataSource(dataSource);
-    }
+    private SessionFactory sessionFactory;
 
     @Override
     public List<Region> getRegion() {
-        // Select ba.Id, ba.Full_Name, ba.Balance From Bank_Account ba
-        String sql ="select region.IdRegion,region.NomRegion from region";
-
-        RowMapper<Region> rowMapper = new RowMapper<Region>() {
-            public Region mapRow(ResultSet rs, int rowNum) throws SQLException {
-                Region region = new Region();
-                region.setIdRegion(rs.getInt("IdRegion"));
-                region.setNomRegion(rs.getString("NomRegion"));
-                return region;
+        Session session = this.sessionFactory.openSession();
+        Transaction tx=null;
+        try{
+            tx=session.beginTransaction();
+            List region = session.createCriteria(Region.class).list();
+            tx.commit();
+            return region;
+        }
+        catch (Exception e)
+        {
+            if (tx != null) {
+                tx.rollback();
             }
-        };
+            throw e;
+        }
+        finally {
+            session.close();
+        }
 
-        List<Region> liste = this.getJdbcTemplate().query(sql,rowMapper);
-
-        int tsisy=0;
-        return liste;
     }
 }

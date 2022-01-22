@@ -1,11 +1,39 @@
 package com.cloudproject.backoffice.model;
 
+import org.springframework.context.annotation.Bean;
+
+import javax.validation.constraints.*;
+
+import javax.persistence.*;
+
+import org.hibernate.validator.constraints.NotBlank;
+
+@Entity
+@Table(name = "ResponsableRegion")
 public class ResponsableRegion {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "IdResponsable")
     private int IdResponsable;
+
+    @Column(name = "IdRegion")
     private int IdRegion;
+
+    @NotBlank
+    @Column(name = "Nom")
     private String Nom;
+
+    @NotBlank
+    @Column(name = "Prenom")
     private String Prenom;
+
+    @NotBlank
+    @Column(name = "Email")
     private String Email;
+
+    @NotBlank
+    @Column(name = "MotDePasse")
     private String MotDePasse;
 
     public ResponsableRegion() {

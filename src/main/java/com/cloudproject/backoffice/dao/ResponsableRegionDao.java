@@ -8,4 +8,6 @@ public interface ResponsableRegionDao {
     List<ResponsableRegion> getRespRegion();
 
     void InsertRespRegion(int idRegion, String nom, String prenom, String email, String motDePasse);
+
+    void UpdateRespRegion(int idResponsable, int idRegion, String nom, String prenom, String email, String motDePasse);
 }
