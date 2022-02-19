@@ -1,3 +1,6 @@
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +8,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Back Office</title>
+        <title>Login</title>
         <!-- plugins:css -->
         <link rel="stylesheet" href="vendors/feather/feather.css">
         <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
@@ -36,34 +39,22 @@
                                 </div>
                                 <h4>Hello! let's get started</h4>
                                 <h6 class="fw-light">Sign in to continue.</h6>
-                                <form class="pt-3">
+                                <br/>
+                                <sf:form method="POST" modelAttribute="Administrateur" action="http://localhost:8081/backoffice/Login">
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                                        <sf:input path="Email" class="form-control form-control-lg" placeholder="Email@gmail.com" value="samkoonmatthieu@gmail.com"/><br/>
+                                        <sf:errors path="Email"/>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                                        <sf:input type="password" path="MotDePasse" class="form-control form-control-lg" placeholder="Password" value="123456"/><br/>
+                                        <sf:errors path="MotDePasse"/>
                                     </div>
                                     <div class="mt-3">
-                                        <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="index.html">SIGN IN</a>
+                                        <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="SIGN IN"/>
                                     </div>
-                                    <div class="my-2 d-flex justify-content-between align-items-center">
-                                        <div class="form-check">
-                                            <label class="form-check-label text-muted">
-                                                <input type="checkbox" class="form-check-input">
-                                                Keep me signed in
-                                            </label>
-                                        </div>
-                                        <a href="#" class="auth-link text-black">Forgot password?</a>
-                                    </div>
-                                    <div class="mb-2">
-                                        <button type="button" class="btn btn-block btn-facebook auth-form-btn">
-                                            <i class="ti-facebook me-2"></i>Connect using facebook
-                                        </button>
-                                    </div>
-                                    <div class="text-center mt-4 fw-light">
-                                        Don't have an account? <a href="register.html" class="text-primary">Create</a>
-                                    </div>
-                                </form>
+                                    <br/>
+                                    <div style="color: red"> <c:out value="${ erreur }"></c:out> </div>
+                                </sf:form>
                             </div>
                         </div>
                     </div>

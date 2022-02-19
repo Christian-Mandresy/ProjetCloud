@@ -11,7 +11,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Insertion Responsable Region</title>
+        <title>Modification Responsable Region</title>
         <!-- plugins:css -->
         <link rel="stylesheet" href="vendors/feather/feather.css">
         <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
@@ -52,7 +52,7 @@
                 <div class="navbar-menu-wrapper d-flex align-items-top"> 
                     <ul class="navbar-nav">
                         <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-                            <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">John Doe</span></h1>
+                            <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">${sess.getAttribute("nomAdmin")}</span></h1>
                             <h3 class="welcome-sub-text">Your performance summary this week </h3>
                         </li>
                     </ul>
@@ -382,23 +382,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="http://localhost:8081/backoffice/Acceuil">
                                 <i class="mdi mdi-grid-large menu-icon"></i>
-                                <span class="menu-title">Dashboard</span>
+                                <span class="menu-title">Acceuil</span>
                             </a>
-                        </li>
-                        <li class="nav-item nav-category">UI Elements</li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                                <i class="menu-icon mdi mdi-floor-plan"></i>
-                                <span class="menu-title">UI Elements</span>
-                                <i class="menu-arrow"></i> 
-                            </a>
-                            <div class="collapse" id="ui-basic">
-                                <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="buttons.jsp">Buttons</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="dropdowns.jsp">Dropdowns</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="typography.jsp">Typography</a></li>
-                                </ul>
-                            </div>
                         </li>
                         <li class="nav-item nav-category">Forms and Datas</li>
                         <li class="nav-item">
@@ -414,18 +399,6 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-                                <i class="menu-icon mdi mdi-chart-line"></i>
-                                <span class="menu-title">Charts</span>
-                                <i class="menu-arrow"></i>
-                            </a>
-                            <div class="collapse" id="charts">
-                                <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="chartjs.jsp">ChartJs</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
                                 <i class="menu-icon mdi mdi-table"></i>
                                 <span class="menu-title">Responsable Region</span>
@@ -437,6 +410,18 @@
                                 </ul>
                                 <ul class="nav flex-column sub-menu">
                                     <li class="nav-item"> <a class="nav-link" href="formRespRegion">Insertion</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                                <i class="menu-icon mdi mdi-table"></i>
+                                <span class="menu-title">Utilisateur</span>
+                                <i class="menu-arrow"></i>
+                            </a>
+                            <div class="collapse" id="tables">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"> <a class="nav-link" href="modifUtilisateur">Modification</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -467,13 +452,6 @@
                                     <li class="nav-item"> <a class="nav-link" href="http://localhost:8081/backoffice/"> Login </a></li>
                                 </ul>
                             </div>
-                        </li>
-                        <li class="nav-item nav-category">help</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html">
-                                <i class="menu-icon mdi mdi-file-document"></i>
-                                <span class="menu-title">Documentation</span>
-                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -521,7 +499,7 @@
                                                         <sf:errors path="MotDePasse" class="form-control"/>
                                                     </div>
                                                     <button type="submit" class="btn btn-primary me-2">Valider</button>
-                                                    <button class="btn btn-light" onclick="window.location.href='http://localhost:8081/backoffice/'">Annuler</button>
+                                                    <button class="btn btn-light" onclick="window.location.href = 'http://localhost:8081/backoffice/'">Annuler</button>
                                                 </form>
                                             </fieldset>
                                         </sf:form>

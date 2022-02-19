@@ -9,5 +9,7 @@ public interface ResponsableRegionDao {
 
     void InsertRespRegion(int idRegion, String nom, String prenom, String email, String motDePasse);
 
-    void UpdateRespRegion(int idResponsable, int idRegion, String nom, String prenom, String email, String motDePasse);
+    void UpdateRespRegion(int IdResponsable, int idRegion, String nom, String prenom, String email, String motDePasse);
+
+    void DeleteRespRegion(int IdResponsable);
 }

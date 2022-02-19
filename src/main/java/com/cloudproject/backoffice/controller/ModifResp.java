@@ -46,17 +46,26 @@ public class ModifResp {
         List<Region> regionList = regServ.getRegion();
         List<ResponsableRegion> responsableList = respReg.findRespReg();
 
-        for (int i = 0; i < regionList.size(); i++) {
+        for (Integer i = 0; i < regionList.size(); i++) {
             if (regionList.get(i).getNomRegion().equals(request.getParameter("IdRegion"))) {
-                respReg.updateRespReg(Integer.parseInt(request.getParameter("IdResponsable")), regionList.get(i).getIdRegion(), request.getParameter("Nom"),  request.getParameter("Prenom"),  request.getParameter("Email"),  request.getParameter("MotDePasse"));
-
-                modelMap.addAttribute("ResponsableRegion", new ResponsableRegion());
-                modelMap.addAttribute("listRespReg", responsableList);
-                modelMap.addAttribute("listRegion", regionList);
-                return "modifRespReg";
+                /*System.out.println(i);
+                System.out.println(regionList.get(i).getNomRegion());
+                System.out.println(request.getParameter("IdRegion"));*/
+                
+                respReg.updateRespReg(Integer.parseInt(request.getParameter("IdResponsable")), ((regionList.get(i).getIdRegion()) - 1), request.getParameter("Nom"), request.getParameter("Prenom"), request.getParameter("Email"), request.getParameter("MotDePasse"));
+                System.out.println(regionList.get(i).getIdRegion() - 1);
             } else {
+
             }
         }
+
+        List<Region> newRegionList = regServ.getRegion();
+        List<ResponsableRegion> newResponsableList = respReg.findRespReg();
+
+        modelMap.addAttribute("ResponsableRegion", new ResponsableRegion());
+        modelMap.addAttribute("listRespReg", newResponsableList);
+        modelMap.addAttribute("listRegion", newRegionList);
+
         return "modifRespReg";
     }
 }

@@ -7,4 +7,6 @@ import java.util.List;
 public interface RegionDao {
 
     List<Region> getRegion();
+
+    List<Region> getRegionNom(String nomRegion);
 }

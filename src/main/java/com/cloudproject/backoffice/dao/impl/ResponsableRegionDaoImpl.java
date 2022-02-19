@@ -13,8 +13,7 @@ import java.util.List;
 
 @Repository("responsableRegionDao")
 @Transactional
-public class ResponsableRegionDaoImpl implements ResponsableRegionDao {
-
+public class ResponsableRegionDaoImpl implements ResponsableRegionDao{
     @Autowired
     private SessionFactory sessionFactory;
 
@@ -33,18 +32,19 @@ public class ResponsableRegionDaoImpl implements ResponsableRegionDao {
                 tx.rollback();
             }
             throw e;
-        } finally {
+        }
+        finally {
             session.close();
         }
     }
 
     @Override
-    public void InsertRespRegion(int idRegion, String nom, String prenom, String email, String motDePasse) {
+    public void InsertRespRegion(int idRegion, String nom, String prenom, String email, String motDePasse){
         Session session = this.sessionFactory.openSession();
-        Transaction tx = null;
+        Transaction tx=null;
         try {
-            tx = session.beginTransaction();
-            ResponsableRegion resp = new ResponsableRegion();
+            tx=session.beginTransaction();
+            ResponsableRegion resp=new ResponsableRegion();
             resp.setIdRegion(idRegion);
             resp.setNom(nom);
             resp.setPrenom(prenom);
@@ -52,38 +52,58 @@ public class ResponsableRegionDaoImpl implements ResponsableRegionDao {
             resp.setMotDePasse(motDePasse);
             session.save(resp);
             tx.commit();
-        } catch (Exception e) {
+        }catch(Exception e) {
             if (tx != null) {
                 tx.rollback();
             }
             throw e;
-        } finally {
+        }finally{
             session.close();
         }
 
     }
     
     @Override
-    public void UpdateRespRegion(int idResponsable, int idRegion, String nom, String prenom, String email, String motDePasse) {
+    public void DeleteRespRegion(int IdResponsable){
         Session session = this.sessionFactory.openSession();
-        Transaction tx = null;
+        Transaction tx=null;
         try {
-            tx = session.beginTransaction();
-            ResponsableRegion resp = new ResponsableRegion();
-            resp.setIdResponsable(idResponsable);
+            tx=session.beginTransaction();
+            ResponsableRegion resp=new ResponsableRegion();
+            resp.setIdResponsable(IdResponsable);
+            session.delete(resp);
+            tx.commit();
+        }catch(Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            throw e;
+        }finally{
+            session.close();
+        }
+    }
+    
+    @Override
+    public void UpdateRespRegion(int IdResponsable, int idRegion, String nom, String prenom, String email, String motDePasse){
+        Session session = this.sessionFactory.openSession();
+        Transaction tx=null;
+        try {
+            tx=session.beginTransaction();
+            ResponsableRegion resp=new ResponsableRegion();
+            resp.setIdResponsable(IdResponsable);
             resp.setIdRegion(idRegion);
             resp.setNom(nom);
             resp.setPrenom(prenom);
             resp.setEmail(email);
             resp.setMotDePasse(motDePasse);
-            session.update(resp);
+            session.saveOrUpdate(resp);
             tx.commit();
-        } catch (Exception e) {
+        }catch(Exception e) {
             if (tx != null) {
                 tx.rollback();
             }
             throw e;
-        } finally {
+        }finally{
             session.close();
         }
 

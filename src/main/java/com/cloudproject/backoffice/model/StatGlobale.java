@@ -1,12 +1,13 @@
 package com.cloudproject.backoffice.model;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "SignalementParType")
+@Table(name = "StatGlobale")
 public class StatGlobale {
     @Id
     @Column(name = "Id")

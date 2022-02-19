@@ -389,23 +389,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="http://localhost:8081/backoffice/Acceuil">
                                 <i class="mdi mdi-grid-large menu-icon"></i>
-                                <span class="menu-title">Dashboard</span>
+                                <span class="menu-title">Acceuil</span>
                             </a>
-                        </li>
-                        <li class="nav-item nav-category">UI Elements</li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                                <i class="menu-icon mdi mdi-floor-plan"></i>
-                                <span class="menu-title">UI Elements</span>
-                                <i class="menu-arrow"></i> 
-                            </a>
-                            <div class="collapse" id="ui-basic">
-                                <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="buttons.jsp">Buttons</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="dropdowns.jsp">Dropdowns</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="typography.jsp">Typography</a></li>
-                                </ul>
-                            </div>
                         </li>
                         <li class="nav-item nav-category">Forms and Datas</li>
                         <li class="nav-item">
@@ -421,18 +406,6 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-                                <i class="menu-icon mdi mdi-chart-line"></i>
-                                <span class="menu-title">Charts</span>
-                                <i class="menu-arrow"></i>
-                            </a>
-                            <div class="collapse" id="charts">
-                                <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="chartjs.jsp">ChartJs</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
                                 <i class="menu-icon mdi mdi-table"></i>
                                 <span class="menu-title">Responsable Region</span>
@@ -444,6 +417,18 @@
                                 </ul>
                                 <ul class="nav flex-column sub-menu">
                                     <li class="nav-item"> <a class="nav-link" href="formRespRegion">Insertion</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                                <i class="menu-icon mdi mdi-table"></i>
+                                <span class="menu-title">Utilisateur</span>
+                                <i class="menu-arrow"></i>
+                            </a>
+                            <div class="collapse" id="tables">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"> <a class="nav-link" href="modifUtilisateur">Modification</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -475,13 +460,6 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item nav-category">help</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html">
-                                <i class="menu-icon mdi mdi-file-document"></i>
-                                <span class="menu-title">Documentation</span>
-                            </a>
-                        </li>
                     </ul>
                 </nav>
                 <!-- partial -->
@@ -491,20 +469,14 @@
                             <div class="col-lg-12 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title">Striped Table</h4>
+                                        <h4 class="card-title">Responsable region</h4>
                                         <p class="card-description">
-                                            Add class <code>.table-striped</code>
+                                            Changer directement les valeurs et appuyez sur <code>Edit</code> pour changer ou <code>Delete</code> pour supprimer.
                                         </p>
-                                        <div class="table-responsive">
+                                        <div class="table-responsive" style="height:500px">
                                             <table class="table table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>
-
-                                                        </th>
-                                                        <th style="width:50px">
-                                                            Region
-                                                        </th>
                                                         <th>
                                                             Nom
                                                         </th>
@@ -524,31 +496,36 @@
                                                         <sf:form method="POST" modelAttribute="ResponsableRegion" action="http://localhost:8081/backoffice/UpdateRespReg">
                                                             <tr>
                                                                 <td>
-                                                                    <sf:input path="IdResponsable" name="IdResponsable" type="hidden" value="${respReg.getIdResponsable()}" style="width:100px;border:none;background:transparent;"/>
+                                                                    <sf:input path="Nom" name="Nom" type="text" value="${respReg.getNom()}" style="width:80px;border:none;background:transparent;"/>
                                                                 </td>
                                                                 <td>
-                                                                    <sf:input path="IdRegion" name="IdRegion" type="text" value="${listRegion.get(respReg.getIdRegion()).getNomRegion()}" style="width:100px;border:none;background:transparent;"/>
+                                                                    <sf:input path="Prenom" name="Prenom" type="text" value="${respReg.getPrenom()}" style="width:80px;border:none;background:transparent;"/>
                                                                 </td>
                                                                 <td>
-                                                                    <sf:input path="Nom" name="Nom" type="text" value="${respReg.getNom()}" style="width:100px;border:none;background:transparent;"/>
-                                                                </td>
-                                                                <td>
-                                                                    <sf:input path="Prenom" name="Prenom" type="text" value="${respReg.getPrenom()}" style="width:100px;border:none;background:transparent;"/>
-                                                                </td>
-                                                                <td>
-                                                                    <sf:input path="Email" name="Email" type="text" value="${respReg.getEmail()}" style="width:100px;border:none;background:transparent;"/>
+                                                                    <sf:input path="Email" name="Email" type="text" value="${respReg.getEmail()}" style="width:120px;border:none;background:transparent;"/>
                                                                 </td>
                                                                 <td>
                                                                     <sf:input path="MotDePasse" name="MotDePasse" type="text" value="${respReg.getMotDePasse()}" style="width:100px;border:none;background:transparent;"/>
                                                                 </td>
                                                                 <td>
+                                                                    <sf:input path="IdResponsable" name="IdResponsable" type="hidden" value="${respReg.getIdResponsable()}"/>
+                                                                    <sf:input path="IdRegion" name="IdRegion" type="hidden" value="${listRegion.get(respReg.getIdRegion()).getNomRegion()}"/>
                                                                     <button type="submit" class="btn btn-dark btn-icon-text">
                                                                         Edit
                                                                         <i class="ti-file btn-icon-append"></i>                          
                                                                     </button>
                                                                 </td>
-                                                            </tr>
                                                         </sf:form>
+                                                                <td>
+                                                                    <sf:form method="POST" modelAttribute="ResponsableRegion" action="http://localhost:8081/backoffice/DeleteRespReg">
+                                                                        <sf:input path="IdResponsable" name="IdResponsable" type="hidden" value="${respReg.getIdResponsable()}"/>
+                                                                        <button type="submit" class="btn btn-success btn-icon-text">                                                 
+                                                                            Delete
+                                                                            <i class="ti-alert btn-icon-prepend"></i>   
+                                                                        </button>
+                                                                    </sf:form>
+                                                                </td>
+                                                            </tr>
                                                     </c:forEach>
                                                 </tbody>
                                             </table>

@@ -2,6 +2,7 @@ package com.cloudproject.backoffice.dao.impl;
 
 import com.cloudproject.backoffice.dao.SignalementDao;
 import com.cloudproject.backoffice.model.Signalement;
+import java.util.Date;
 import org.hibernate.*;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
@@ -16,7 +17,7 @@ public class SignalementDaoImpl implements SignalementDao {
     private SessionFactory sessionFactory;
 
     @Override
-    public List getAllSign()
+    public List<Signalement> getAllSign()
     {
         Session session = this.sessionFactory.openSession();
         Transaction tx = null;
@@ -68,4 +69,48 @@ public class SignalementDaoImpl implements SignalementDao {
         }
     }
 
+    @Override
+    public List getSignRegion(int IdRegion)
+    {
+        Session session = this.sessionFactory.openSession();
+        try{
+            String sql="select IdSignalement, IdUtilisateur, IdType, IdStatus, DescriptionSignalement, Longitude, Latitude, DateHeureSignalement from SignalEtRegion where IdRegion = "+"'"+IdRegion+"'";
+            SQLQuery query= session.createSQLQuery(sql)
+                    .addEntity(Signalement.class);
+            return query.list();
+        }catch (Exception e)
+        {
+            throw e;
+        }finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public void UpdateSignalement(int IdSignalement,Integer IdUtilisateur,int IdType,int IdStatus,String DescriptionSignalement,float Longitude,float Latitude,Date DateHeureSignalement){
+        Session session = this.sessionFactory.openSession();
+        Transaction tx=null;
+        try {
+            tx=session.beginTransaction();
+            Signalement signal=new Signalement();
+            signal.setIdSignalement(IdSignalement);
+            signal.setIdUtilisateur(IdUtilisateur);
+            signal.setIdType(IdType);
+            signal.setIdStatus(IdStatus);
+            signal.setDescriptionSignalement(DescriptionSignalement);
+            signal.setLongitude(Longitude);
+            signal.setLatitude(Latitude);
+            signal.setDateHeureSignalement(DateHeureSignalement);
+            
+            session.saveOrUpdate(signal);
+            tx.commit();
+        }catch(Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            throw e;
+        }finally{
+            session.close();
+        }
+    }
 }

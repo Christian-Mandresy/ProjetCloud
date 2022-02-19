@@ -1,45 +1,60 @@
 package com.cloudproject.backoffice.model;
 
 
+import java.io.Serializable;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 
 @Entity
-@Table(name="StatistiqueCriteriaRegionDao")
+@Table(name="StatistiqueCriteriaRegion")
+@XmlRootElement(name = "StatistiqueCriteriaRegion")
 public class StatistiqueCriteriaRegion {
 
     @Id
+    @XmlElement
     @Column(name = "IdSignalement")
     private int IdSignalement;
 
+    @XmlElement
     @Column(name = "IdUtilisateur")
     private int IdUtilisateur;
 
+    @XmlElement
     @Column(name = "IdType")
     private int IdType;
 
+    @XmlElement
     @Column(name = "IdStatus")
     private int IdStatus;
 
+    @XmlElement
     @Column(name = "DescriptionSignalement")
     private String DescriptionSignalement;
 
+    @XmlElement
     @Column(name="Longitude")
     private float Longitude;
 
+    @XmlElement
     @Column(name = "Latitude")
     private float Latitude;
 
+    @XmlElement
     @Column(name = "DateHeureSignalement")
     @Temporal(TemporalType.TIMESTAMP)
     private Date DateHeureSignalement;
 
+    @XmlElement
     @Column(name = "IdRegion")
     private int IdRegion;
 
+    @XmlElement
     @Column(name = "NomRegion")
     private String NomRegion;
 
+    @XmlElement
     @Column(name = "Nombre")
     private int Nombre;
 

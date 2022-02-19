@@ -16,56 +16,56 @@ CREATE TABLE Utilisateur(
 );
 
 
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Orson","Wheeler","1986-05-30","cursus@imperdieterat.com","CXE85BOQ9QO","F","05 30 42");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Gage","Hardin","1989-01-29","arcu@idmagna.ca","IOA13CHQ6PH","M","01 38 22");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Barrett","Gilliam","1980-02-28","neque.venenatis@scelerisquenequeNullam.org","IFA67YGW7HW","F","08 69 47");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Unity","May","1976-11-08","Etiam@in.co.uk","SFQ15NBG3QM","M","05 98 87");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Kyla","Mendoza","2001-09-06","aliquet.nec@utpharetra.ca","WIY14HYZ2ZE","M","07 48 95");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Austin","Martinez","1981-04-07","id.ante.Nunc@nullaCras.ca","VHM56YAQ4GJ","F","07 00 18");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Uriel","Neal","1999-02-02","vulputate.risus@Crassed.net","QRQ26ULA2OF","F","09 96 53");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Jaquelyn","Ramos","1993-09-07","tempor@netus.ca","AGF79ZYF1AY","F","05 98 51");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Fuller","Garrett","1981-03-16","magnis@nullaIntincidunt.ca","BGQ58WZW9ZE","F","08 86 40");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Melodie","Rocha","1990-12-13","consequat@necanteMaecenas.com","JTE39EGE0IM","F","08 44 62");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Shaeleigh","Donaldson","1988-08-24","mauris.eu@felis.net","YBJ03MZB6EC","F","07 67 27");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Hilel","Fox","1977-08-07","enim.Suspendisse.aliquet@afelis.co.uk","LVA89TVF4CY","F","07 11 15");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Quon","Valentine","1983-01-04","lorem@nisiMauris.edu","PBO63QBC0VK","M","07 06 27");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Cody","Parrish","1977-09-12","sem.semper.erat@dolorFuscefeugiat.ca","IVU73FPD0IN","M","09 57 84");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Sydnee","Sosa","1984-10-17","convallis.ante@lectusCumsociis.edu","XFE63XSP9MU","M","03 67 27");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Brianna","Skinner","1991-01-16","Nunc.pulvinar@purusinmolestie.com","USH67CFS9HI","F","03 08 84");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Judah","Hawkins","1976-11-12","Mauris.vel.turpis@egestasadui.com","REU78HHH5EL","M","02 40 59");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Thomas","Kelly","1983-11-04","arcu.Aliquam.ultrices@lacus.org","CPF63DSA4UG","F","03 32 89");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Winter","Gibbs","1992-05-05","Nulla.facilisis@facilisisfacilisis.edu","VYR46LFO2DF","M","05 11 96");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Grant","Dawson","1984-10-22","eget.metus.In@Nunc.net","UAR87KLQ4HR","M","09 65 90");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Madaline","Mcdowell","1983-04-05","mattis.semper@risusa.edu","HQU44VRC0LG","F","05 19 19");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Maggie","Vega","1987-01-02","congue@nasceturridiculusmus.net","PQI30ZTL4DY","F","04 61 58");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Lionel","Hayes","1991-06-12","Ut@nasceturridiculus.net","CUU61MOR7OB","F","09 13 41");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Hannah","Wiggins","1992-07-27","aliquet@pedeCumsociis.ca","RBA55NKE1GY","F","06 87 64");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Caldwell","Zimmerman","1986-04-13","tincidunt.tempus.risus@tortor.com","DIP05WYZ8YK","M","06 77 30");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Mariam","Townsend","2002-05-16","leo.Vivamus@magnaetipsum.ca","CSM42BJO6YX","F","02 41 18");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Angelica","Salazar","1984-05-01","Sed@nonantebibendum.edu","CIL59TWY3MA","M","09 68 99");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Hammett","Sykes","1982-09-26","erat.eget.tincidunt@ProindolorNulla.net","MHE08SFB1AU","F","01 66 32");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Kenneth","Pruitt","1978-10-09","amet.consectetuer.adipiscing@senectuset.co.uk","BIQ56BEV9TZ","F","02 22 83");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Thane","Bartlett","1978-11-25","ornare@nislsemconsequat.edu","XCE77RXI8RO","F","09 31 71");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Pandora","Morse","1992-06-06","adipiscing.ligula@aliquetsemut.co.uk","IKF31VKY0JE","M","05 66 43");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Maxwell","Sanchez","1999-03-30","auctor.non@ornare.ca","TXD18MUS4RQ","M","09 09 91");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Joseph","Everett","1988-07-02","enim.gravida@egestas.com","EVX84OLN7UU","F","04 31 47");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Jarrod","Bowman","2001-10-21","sit.amet@Aliquam.co.uk","IUD81GDF4EO","M","04 61 11");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Charity","Barrera","1986-05-17","purus.Duis@ligula.edu","DNI25QMP3OU","F","02 30 97");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Rinah","Bender","1991-09-09","sem.ut.dolor@urnaet.net","ZBO21SCA9EV","M","06 94 70");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Elizabeth","Hammond","1990-08-18","aliquam.eros.turpis@nonummy.ca","VUR08UYV7RW","F","09 86 34");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Barry","Fuller","1979-10-15","a.neque.Nullam@ascelerisquesed.org","USE14BQU8JP","M","08 66 96");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Joel","Stewart","1976-09-13","molestie.arcu@lectusCum.edu","AUG39YHB2GJ","F","02 74 22");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Daryl","Sloan","1986-11-06","Curabitur@facilisi.com","ZJJ46FQL6CL","M","01 84 39");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Aileen","Peters","1981-02-26","aliquam.eu@Curae.net","PAW71CRF7TR","M","05 19 27");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Clayton","Hart","1983-05-05","neque.Sed@loremegetmollis.edu","MOI75VDT8DG","F","09 91 55");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Scarlett","Hughes","1991-02-19","cubilia@elementumlorem.com","QTA94MIX7CA","M","05 38 10");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Cairo","Hodge","1998-02-26","in.hendrerit.consectetuer@arcuSed.co.uk","DCY89JLI2VZ","F","01 57 15");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Imani","Tucker","1981-09-14","non.sollicitudin.a@Suspendisse.net","TIL83HSF9OP","M","01 60 80");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Lev","Mcdaniel","1987-10-09","lacinia.vitae.sodales@Maurismagna.net","OTK76WGT5FB","M","02 65 08");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Vielka","Hancock","1988-04-29","Nullam.scelerisque@feugiat.com","SZE69MWD6KI","M","04 30 83");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Akeem","Black","1996-03-02","a.mi@risusodioauctor.edu","CPW32JZB5QM","M","09 23 72");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Shaine","Ellis","1978-05-26","feugiat.Sed.nec@Duisvolutpatnunc.ca","TIF87RHX5AJ","M","01 54 31");
-INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Oleg","Olsen","1982-01-08","vestibulum.nec@dictum.co.uk","YMI11DXF5HP","F","08 07 19");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Orson","Wheeler","1986-05-30","cursus@gmail.com","CXE85BOQ9QO","F","05 30 42");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Gage","Hardin","1989-01-29","arcu@gmail.com","IOA13CHQ6PH","M","01 38 22");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Barrett","Gilliam","1980-02-28","nequevenenatis@gmail.com","IFA67YGW7HW","F","08 69 47");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Unity","May","1976-11-08","Etiam@gmail.com","SFQ15NBG3QM","M","05 98 87");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Kyla","Mendoza","2001-09-06","aliquenec@gmail.com","WIY14HYZ2ZE","M","07 48 95");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Austin","Martinez","1981-04-07","idanteNunc@gmail.com","VHM56YAQ4GJ","F","07 00 18");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Uriel","Neal","1999-02-02","vulputaterisus@gmail.com","QRQ26ULA2OF","F","09 96 53");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Jaquelyn","Ramos","1993-09-07","tempor@gmail.com","AGF79ZYF1AY","F","05 98 51");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Fuller","Garrett","1981-03-16","magnis@gmail.com","BGQ58WZW9ZE","F","08 86 40");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Melodie","Rocha","1990-12-13","consequat@gmail.com","JTE39EGE0IM","F","08 44 62");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Shaeleigh","Donaldson","1988-08-24","mauriseu@gmail.com","YBJ03MZB6EC","F","07 67 27");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Hilel","Fox","1977-08-07","enim.Suspendissealiquet@gmail.com","LVA89TVF4CY","F","07 11 15");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Quon","Valentine","1983-01-04","lorem@gmail.com","PBO63QBC0VK","M","07 06 27");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Cody","Parrish","1977-09-12","semsempererat@gmail.com","IVU73FPD0IN","M","09 57 84");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Sydnee","Sosa","1984-10-17","convallisante@gmail.com","XFE63XSP9MU","M","03 67 27");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Brianna","Skinner","1991-01-16","Nuncpulvinar@gmail.com","USH67CFS9HI","F","03 08 84");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Judah","Hawkins","1976-11-12","Maurisvelturpis@gmail.com","REU78HHH5EL","M","02 40 59");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Thomas","Kelly","1983-11-04","arcuAliquamultrices@gmail.com","CPF63DSA4UG","F","03 32 89");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Winter","Gibbs","1992-05-05","Nullafacilisis@gmail.com","VYR46LFO2DF","M","05 11 96");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Grant","Dawson","1984-10-22","egetmetusIn@gmail.com","UAR87KLQ4HR","M","09 65 90");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Madaline","Mcdowell","1983-04-05","mattissemper@gmail.com","HQU44VRC0LG","F","05 19 19");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Maggie","Vega","1987-01-02","congue@gmail.com","PQI30ZTL4DY","F","04 61 58");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Lionel","Hayes","1991-06-12","Ut@gmail.com","CUU61MOR7OB","F","09 13 41");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Hannah","Wiggins","1992-07-27","aliquet@gmail.com","RBA55NKE1GY","F","06 87 64");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Caldwell","Zimmerman","1986-04-13","tincidunttempusrisus@gmail.com","DIP05WYZ8YK","M","06 77 30");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Mariam","Townsend","2002-05-16","leoVivamus@gmail.com","CSM42BJO6YX","F","02 41 18");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Angelica","Salazar","1984-05-01","Sed@gmail.com","CIL59TWY3MA","M","09 68 99");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Hammett","Sykes","1982-09-26","erategettincidunt@gmail.com","MHE08SFB1AU","F","01 66 32");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Kenneth","Pruitt","1978-10-09","ametconsectetueradipiscing@gmail.com","BIQ56BEV9TZ","F","02 22 83");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Thane","Bartlett","1978-11-25","ornare@gmail.com","XCE77RXI8RO","F","09 31 71");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Pandora","Morse","1992-06-06","adipiscingligula@gmail.com","IKF31VKY0JE","M","05 66 43");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Maxwell","Sanchez","1999-03-30","auctornon@gmail.com","TXD18MUS4RQ","M","09 09 91");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Joseph","Everett","1988-07-02","enimgravida@gmail.com","EVX84OLN7UU","F","04 31 47");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Jarrod","Bowman","2001-10-21","sitamet@gmail.com","IUD81GDF4EO","M","04 61 11");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Charity","Barrera","1986-05-17","purusDuis@gmail.com","DNI25QMP3OU","F","02 30 97");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Rinah","Bender","1991-09-09","semutdolor@gmail.com","ZBO21SCA9EV","M","06 94 70");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Elizabeth","Hammond","1990-08-18","aliquamerosturpis@gmail.com","VUR08UYV7RW","F","09 86 34");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Barry","Fuller","1979-10-15","anequeNullam@gmail.com","USE14BQU8JP","M","08 66 96");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Joel","Stewart","1976-09-13","molestiearcu@gmail.com","AUG39YHB2GJ","F","02 74 22");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Daryl","Sloan","1986-11-06","Curabitur@gmail.com","ZJJ46FQL6CL","M","01 84 39");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Aileen","Peters","1981-02-26","aliquameu@gmail.com","PAW71CRF7TR","M","05 19 27");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Clayton","Hart","1983-05-05","nequeSed@gmail.com","MOI75VDT8DG","F","09 91 55");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Scarlett","Hughes","1991-02-19","cubilia@gmail.com","QTA94MIX7CA","M","05 38 10");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Cairo","Hodge","1998-02-26","inhendreritconsectetuer@gmail.com","DCY89JLI2VZ","F","01 57 15");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Imani","Tucker","1981-09-14","nonsollicitudina@gmail.com","TIL83HSF9OP","M","01 60 80");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Lev","Mcdaniel","1987-10-09","laciniavitaesodales@gmail.com","OTK76WGT5FB","M","02 65 08");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Vielka","Hancock","1988-04-29","Nullamscelerisque@gmail.com","SZE69MWD6KI","M","04 30 83");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Akeem","Black","1996-03-02","ami@gmail.com","CPW32JZB5QM","M","09 23 72");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Shaine","Ellis","1978-05-26","feugiatSednec@gmail.com","TIF87RHX5AJ","M","01 54 31");
+INSERT INTO Utilisateur (Nom,Prenom,DateNaissance,Email,MotDePasse,Sexe,Contact) VALUES ("Oleg","Olsen","1982-01-08","vestibulumnec@gmail.com","YMI11DXF5HP","F","08 07 19");
 
 
 CREATE TABLE TypeSignalement(
@@ -101,7 +101,7 @@ create table SignalementRegion(
     IdSignalement INTEGER not null,
     IdRegion INTEGER not null,
     DateAffectation DATETIME,
-    PRIMARY KEY (IdSignalement,IdRegion)
+    PRIMARY KEY (IdSignalement)
 );
 
 
@@ -182,13 +182,13 @@ INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (7
 INSERT INTO SignalementRegion (IdSignalement,IdRegion,DateAffectation) VALUES (75,20,"2021-09-07 05:53:03");
 
 
-INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (36,3,1,"scelerisque scelerisque dui. Suspendisse ac metus vitae velit egestas lacinia.","-168.55664","-43.22867","2021-04-11 16:33:52");
-INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (7,1,1,"luctus, ipsum leo elementum sem, vitae aliquam eros turpis non","133.67151","-56.5003","2021-02-25 23:12:17");
-INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (28,3,1,"et ipsum cursus vestibulum. Mauris magna. Duis dignissim tempor arcu.","-6.0401","-15.99976","2021-03-17 05:48:11");
+INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (36,3,1,"scelerisque scelerisque dui. Suspendisse ac metus vitae velit egestas lacinia.","-14.5","49.1","2021-04-11 16:33:52");
+INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (7,1,1,"luctus, ipsum leo elementum sem, vitae aliquam eros turpis non","-20.5","48.1","2021-02-25 23:12:17");
+INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (28,3,1,"et ipsum cursus vestibulum. Mauris magna. Duis dignissim tempor arcu.","-20.5","45.1","2021-03-17 05:48:11");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (6,1,1,"ullamcorper. Duis cursus, diam at pretium aliquet, metus urna convallis","-54.63653","-69.41847","2021-12-29 10:20:41");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (19,1,2,"nonummy ac, feugiat non, lobortis quis, pede. Suspendisse dui. Fusce","43.41711","56.73553","2021-07-05 19:41:17");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (49,1,2,"eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer in","-160.22974","-54.02938","2021-04-23 13:15:41");
-INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (12,2,1,"vitae sodales nisi magna sed dui. Fusce aliquam, enim nec","170.74744","29.99614","2021-09-29 20:59:59");
+INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (12,2,1,"vitae sodales nigga sed dui. Fusce aliquam, enim nec","170.74744","29.99614","2021-09-29 20:59:59");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (30,1,2,"Nulla aliquet. Proin velit. Sed malesuada augue ut lacus. Nulla","-39.45933","89.93771","2021-12-20 05:32:00");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (1,2,3,"aliquam iaculis, lacus pede sagittis augue, eu tempor erat neque","169.5863","17.85077","2022-01-06 20:24:42");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (48,1,1,"Phasellus elit pede, malesuada vel, venenatis vel, faucibus id, libero.","73.44896","36.25309","2021-10-28 20:24:41");
@@ -257,7 +257,7 @@ INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Lo
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (18,1,2,"pede sagittis augue, eu tempor erat neque non quam. Pellentesque","-89.79118","50.09746","2021-04-17 17:33:05");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (31,2,1,"leo elementum sem, vitae aliquam eros turpis non enim. Mauris","-23.71625","76.1344","2021-03-30 13:52:48");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (47,3,1,"est. Nunc ullamcorper, velit in aliquet lobortis, nisi nibh lacinia","-68.07767","-21.02484","2021-08-10 10:00:11");
-INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (20,3,3,"adipiscing. Mauris molestie pharetra nibh. Aliquam ornare, libero at auctor","-47.35442","-36.48703","2021-10-15 09:12:15");
+INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (20,3,3,"adipiscing. Mauris molestie pharetra nibh. Aliquam ornare, libero at auctor","49.1","-14.5","2021-10-15 09:12:15");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (49,1,1,"mauris id sapien. Cras dolor dolor, tempus non, lacinia at,","94.05611","15.66574","2021-11-03 17:07:35");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (33,2,3,"convallis est, vitae sodales nisi magna sed dui. Fusce aliquam,","53.7134","-68.24945","2021-06-01 00:16:57");
 INSERT INTO Signalement (IdUtilisateur,IdType,IdStatus,DescriptionSignalement,Longitude,Latitude,DateHeureSignalement) VALUES (32,2,1,"laoreet, libero et tristique pellentesque, tellus sem mollis dui, in","-89.81949","4.0159","2021-11-18 05:22:25");
@@ -358,11 +358,22 @@ VALUES(6,"Blossom","Mosley","dapibus.rutrum.justo@yahoo.org","GJT62HEM4UU"),
   (11,"Iliana","Kirk","egestas.a@protonmail.net","QHJ85ERH7EV"),
   (8,"Carissa","Bradley","risus.morbi@aol.com","PPK55TLI3HY");
 
+CREATE TABLE Administrateur(
+    idAdmin INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    NomAdmin VARCHAR(100),
+    PrenomAdmin VARCHAR(100),
+    Email VARCHAR(50),
+    MotDePasse VARCHAR(100)
+);
+
+INSERT INTO Administrateur VALUES(null,"Sam-Koon","Mathieu","samkoonmatthieu@gmail.com","123456"),
+(null,"Christian","Mandresy","christianmandresy@gmail.com","987654");
+
 create view SignalEtRegion as
 select DISTINCT sig.IdSignalement, IdUtilisateur, IdType, IdStatus, DescriptionSignalement, Longitude, Latitude, DateHeureSignalement,sigR.IdRegion,region.NomRegion
 from signalement as sig
          INNER JOIN  signalementregion as sigR on sig.IdSignalement=sigR.IdSignalement
-         inner join region on sigR.IdRegion=region.IdRegion group by sig.IdSignalement,sigR.IdRegion;
+         INNER JOIN region on sigR.IdRegion=region.IdRegion group by sig.IdSignalement,sigR.IdRegion;
 
 -- nombre de signalement par type
 CREATE VIEW SignalementParType
@@ -392,4 +403,3 @@ select *,count(IdSignalement)as Nombre from SignalEtRegion group by IdRegion;
 create view NonAssigner as
 select DISTINCT sig.IdSignalement, IdUtilisateur, IdType, IdStatus, DescriptionSignalement, Longitude, Latitude, DateHeureSignalement
 from signalement as sig where sig.IdSignalement not in (select sigr.IdSignalement from SignalEtRegion sigr);
-

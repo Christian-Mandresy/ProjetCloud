@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import org.hibernate.HibernateException;
 
 @Repository("TypeDao")
 public class TypeDaoImpl implements TypeDao {
@@ -25,7 +26,7 @@ public class TypeDaoImpl implements TypeDao {
             List type = session.createCriteria(Type.class).list();
             tx.commit();
             return type;
-        } catch (Exception e) {
+        } catch (HibernateException e) {
             if (tx != null) {
                 tx.rollback();
             }

@@ -380,23 +380,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="http://localhost:8081/backoffice/Acceuil">
                                 <i class="mdi mdi-grid-large menu-icon"></i>
-                                <span class="menu-title">Dashboard</span>
+                                <span class="menu-title">Acceuil</span>
                             </a>
-                        </li>
-                        <li class="nav-item nav-category">UI Elements</li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                                <i class="menu-icon mdi mdi-floor-plan"></i>
-                                <span class="menu-title">UI Elements</span>
-                                <i class="menu-arrow"></i> 
-                            </a>
-                            <div class="collapse" id="ui-basic">
-                                <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="buttons.jsp">Buttons</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="dropdowns.jsp">Dropdowns</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="typography.jsp">Typography</a></li>
-                                </ul>
-                            </div>
                         </li>
                         <li class="nav-item nav-category">Forms and Datas</li>
                         <li class="nav-item">
@@ -412,18 +397,6 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-                                <i class="menu-icon mdi mdi-chart-line"></i>
-                                <span class="menu-title">Charts</span>
-                                <i class="menu-arrow"></i>
-                            </a>
-                            <div class="collapse" id="charts">
-                                <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="chartjs.jsp">ChartJs</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
                                 <i class="menu-icon mdi mdi-table"></i>
                                 <span class="menu-title">Responsable Region</span>
@@ -435,6 +408,18 @@
                                 </ul>
                                 <ul class="nav flex-column sub-menu">
                                     <li class="nav-item"> <a class="nav-link" href="formRespRegion">Insertion</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                                <i class="menu-icon mdi mdi-table"></i>
+                                <span class="menu-title">Utilisateur</span>
+                                <i class="menu-arrow"></i>
+                            </a>
+                            <div class="collapse" id="tables">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"> <a class="nav-link" href="modifUtilisateur">Modification</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -465,13 +450,6 @@
                                     <li class="nav-item"> <a class="nav-link" href="http://localhost:8081/backoffice/"> Login </a></li>
                                 </ul>
                             </div>
-                        </li>
-                        <li class="nav-item nav-category">help</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html">
-                                <i class="menu-icon mdi mdi-file-document"></i>
-                                <span class="menu-title">Documentation</span>
-                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -558,7 +536,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h4 class="card-title">Statistique globale Region</h4>
-                                        <div class="table-responsive">
+                                        <div class="table-responsive" style="height:400px">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
@@ -644,6 +622,7 @@
         <script src="js/todolist.js"></script>
         <!-- endinject -->
         <!-- Custom js for this page-->
+        <script src="js/chart.js"></script>
         <!-- End custom js for this page-->
     </body>
 
