@@ -18,6 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class StatistiqueController {
@@ -87,6 +88,10 @@ public class StatistiqueController {
         List Stat=statistiqueCriteriaRegionService.getStat(typenum,
                 statusnum,region,TdateDeb,TdateFin);
 
+        HttpSession sess = request.getSession();
+        String nomAdmin = (String) sess.getAttribute("nomAdmin");
+        
+        model.addAttribute("nomAdmin", nomAdmin);
         model.addAttribute("ListType",ListType);
         model.addAttribute("ListStatus",ListStatus);
         model.addAttribute("ListRegion",ListRegion);

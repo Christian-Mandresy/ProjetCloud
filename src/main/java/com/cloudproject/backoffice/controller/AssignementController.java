@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class AssignementController {
@@ -41,7 +42,10 @@ public class AssignementController {
     }
 
     @RequestMapping("/FormAssign")
-    public String list(Map<String, Object> modelMap) {
+    public String list(Map<String, Object> modelMap, HttpServletRequest request) {
+        HttpSession sess = request.getSession();
+        String nomAdmin = (String) sess.getAttribute("nomAdmin");
+        modelMap.put("nomAdmin", nomAdmin);
         modelMap.put("ListSign", signalementService.getNonAssigner());
         modelMap.put("ListType", typeService.geType());
         modelMap.put("ListStatus", statusService.getStatus());

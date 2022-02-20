@@ -36,10 +36,10 @@
                         </button>
                     </div>
                     <div>
-                        <a class="navbar-brand brand-logo" href="index.html">
+                        <a class="navbar-brand brand-logo" href="/backoffice/Acceuil">
                             <img src="images/logo.svg" alt="logo" />
                         </a>
-                        <a class="navbar-brand brand-logo-mini" href="index.html">
+                        <a class="navbar-brand brand-logo-mini" href="/backoffice/Acceuil">
                             <img src="images/logo-mini.svg" alt="logo" />
                         </a>
                     </div>
@@ -47,8 +47,8 @@
                 <div class="navbar-menu-wrapper d-flex align-items-top"> 
                     <ul class="navbar-nav">
                         <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-                            <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">John Doe</span></h1>
-                            <h3 class="welcome-sub-text">Your performance summary this week </h3>
+                            <h1 class="welcome-text">Bonjour, <span class="text-black fw-bold">${nomAdmin}</span></h1>
+                            <h3 class="welcome-sub-text">Bienvenue</h3>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
@@ -375,7 +375,7 @@
                 <nav class="sidebar sidebar-offcanvas" id="sidebar">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="http://localhost:8081/backoffice/Acceuil">
+                            <a class="nav-link" href="/backoffice/Acceuil">
                                 <i class="mdi mdi-grid-large menu-icon"></i>
                                 <span class="menu-title">Acceuil</span>
                             </a>
@@ -389,7 +389,7 @@
                             </a>
                             <div class="collapse" id="form-elements">
                                 <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"><a class="nav-link" href="FormSearch">Avancée</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/backoffice/FormSearch">Avancée</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -401,10 +401,10 @@
                             </a>
                             <div class="collapse" id="tables">
                                 <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="FormModifRespReg">Modification</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="/backoffice/FormModifRespReg">Modification</a></li>
                                 </ul>
                                 <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="formRespRegion">Insertion</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="/backoffice/formRespRegion">Insertion</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -416,7 +416,7 @@
                             </a>
                             <div class="collapse" id="tables">
                                 <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="modifUtilisateur">Modification</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="/backoffice/modifUtilisateur">Modification</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -428,10 +428,10 @@
                             </a>
                             <div class="collapse" id="icons">
                                 <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="FormStatistique">Statistique</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="/backoffice/FormStatistique">Statistique</a></li>
                                 </ul>
                                 <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="FormAssign">Assignement Region</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="/backoffice/FormAssign">Assignement Region</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -444,34 +444,13 @@
                             </a>
                             <div class="collapse" id="auth">
                                 <ul class="nav flex-column sub-menu">
-                                    <li class="nav-item"> <a class="nav-link" href="http://localhost:8081/backoffice/"> Login </a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="/backoffice/Logout"> Deconnexion </a></li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </nav>
                 <!-- partial -->
-
-                <!--<table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">Type</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Region</th>
-                        <th scope="col">Nombre de Signalement</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                <c:forEach items="${requestScope.ListStat}" var="lists">
-                        <tr>
-                            <th >${ListType.get(lists.getIdType()-1).getNomType()}</th>
-                            <td>${ListStatus.get(lists.getIdStatus()-1).getNomStatus()}</td>
-                            <td>${lists.getNomRegion()}</td>
-                            <td>${lists.getNombre()}</td>
-                        </tr>
-                </c:forEach>
-                </tbody>
-                </table>-->
                 <div class="main-panel">
                     <div class="content-wrapper">
                         <div class="row">

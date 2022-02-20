@@ -40,7 +40,7 @@
                                 <h4>Hello! let's get started</h4>
                                 <h6 class="fw-light">Sign in to continue.</h6>
                                 <br/>
-                                <sf:form method="POST" modelAttribute="Administrateur" action="http://localhost:8081/backoffice/Login">
+                                <sf:form method="POST" modelAttribute="Administrateur" action="/backoffice/Login">
                                     <div class="form-group">
                                         <sf:input path="Email" class="form-control form-control-lg" placeholder="Email@gmail.com" value="samkoonmatthieu@gmail.com"/><br/>
                                         <sf:errors path="Email"/>
@@ -53,7 +53,7 @@
                                         <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="SIGN IN"/>
                                     </div>
                                     <br/>
-                                    <div style="color: red"> <c:out value="${ erreur }"></c:out> </div>
+                                    <div style="color: red"> <p><c:out value="${ erreur }"></c:out></p> </div>
                                 </sf:form>
                             </div>
                         </div>

@@ -19,6 +19,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -86,6 +87,10 @@ public class InsertSignalementRegion {
         
         signServ.insertSignalementRegion(Integer.parseInt(idSignalement), retourRegion.getIdRegion(), finalDate);
         
+        HttpSession sess = request.getSession();
+        String nomAdmin = (String) sess.getAttribute("nomAdmin");
+        
+        modelMap.put("nomAdmin", nomAdmin);
         modelMap.put("ListSign", signalementService.getNonAssigner());
         modelMap.put("ListType", typeService.geType());
         modelMap.put("ListStatus", statusService.getStatus());

@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class FormulaireInsertRespController {
@@ -18,9 +20,14 @@ public class FormulaireInsertRespController {
 
 
     @RequestMapping("/formRespRegion")
-    public String initForm(Map<String, Object> modelMap)
+    public String initForm(Map<String, Object> modelMap, HttpServletRequest request)
     {
         ResponsableRegion responsableRegion=new ResponsableRegion();
+        
+        HttpSession sess = request.getSession();
+        String nomAdmin = (String) sess.getAttribute("nomAdmin");
+        
+        modelMap.put("nomAdmin", nomAdmin);
         modelMap.put("ResponsableRegion",responsableRegion);
         modelMap.put("ListRegion",regionService.getRegion());
         return "FormRespRegion";

@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class FormulaireStatistique {
@@ -39,9 +41,14 @@ public class FormulaireStatistique {
     }
 
     @RequestMapping("/FormStatistique")
-    public String initForm(Map<String, Object> modelMap)
+    public String initForm(Map<String, Object> modelMap, HttpServletRequest request)
     {
         StatistiqueCriteriaRegion stat=new StatistiqueCriteriaRegion();
+        
+        HttpSession sess = request.getSession();
+        String nomAdmin = (String) sess.getAttribute("nomAdmin");
+        
+        modelMap.put("nomAdmin", nomAdmin);
         modelMap.put("Statistique",stat);
         modelMap.put("ListRegion",regionService.getRegion());
         modelMap.put("ListType",typeService.geType());

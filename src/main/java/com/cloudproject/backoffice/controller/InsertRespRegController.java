@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
-
-
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class InsertRespRegController {
+
     private ResponsableRegionService responsableRegionService;
     private RegionService regionService;
 
@@ -33,23 +33,28 @@ public class InsertRespRegController {
 
     @RequestMapping(value = "/insertResp", method = RequestMethod.POST)
     public String insertResp(@ModelAttribute("ResponsableRegion") @Validated ResponsableRegion responsableRegion,
-                             BindingResult bindingResult, Model model, HttpServletRequest request)
-    {
-        if(bindingResult.hasErrors()){
-            model.addAttribute("ResponsableRegion",responsableRegion);
-            model.addAttribute("ListRegion",regionService.getRegion());
+            BindingResult bindingResult, Model model, HttpServletRequest request) {
+        if (bindingResult.hasErrors()) {
+            HttpSession sess = request.getSession();
+            String nomAdmin = (String) sess.getAttribute("nomAdmin");
+
+            model.addAttribute("nomAdmin", nomAdmin);
+            model.addAttribute("ResponsableRegion", responsableRegion);
+            model.addAttribute("ListRegion", regionService.getRegion());
             return "FormRespRegion";
-        }
-        else
-        {
-            responsableRegionService.insertResp(Integer.parseInt(request.getParameter("idRegion")),request.getParameter("Nom"),request.getParameter("Prenom"),request.getParameter("Email"),request.getParameter("MotDePasse"));
-            model.addAttribute("ResponsableRegion",responsableRegion);
-            model.addAttribute("ListRegion",regionService.getRegion());
-            model.addAttribute("success","insertion reussie");
+        } else {
+            responsableRegionService.insertResp(Integer.parseInt(request.getParameter("idRegion")), request.getParameter("Nom"), request.getParameter("Prenom"), request.getParameter("Email"), request.getParameter("MotDePasse"));
+
+            HttpSession sess = request.getSession();
+            String nomAdmin = (String) sess.getAttribute("nomAdmin");
+
+            model.addAttribute("nomAdmin", nomAdmin);
+            model.addAttribute("ResponsableRegion", responsableRegion);
+            model.addAttribute("ListRegion", regionService.getRegion());
+            model.addAttribute("success", "insertion reussie");
             return "FormRespRegion";
         }
 
     }
 
 }
-

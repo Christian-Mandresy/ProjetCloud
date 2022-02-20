@@ -11,6 +11,8 @@ import com.cloudproject.backoffice.service.RegionService;
 import com.cloudproject.backoffice.service.ResponsableRegionService;
 import java.util.List;
 import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,10 +38,14 @@ public class FormulaireModifRespReg {
     }
 
     @GetMapping("/FormModifRespReg")
-    public String afficheRespReg(Map modelMap) {
+    public String afficheRespReg(Map modelMap, HttpServletRequest request) {
         List<Region> regionList = regServ.getRegion();
         List<ResponsableRegion> responsableList = respReg.findRespReg();
 
+        HttpSession sess = request.getSession();
+        String nomAdmin = (String) sess.getAttribute("nomAdmin");
+        
+        modelMap.put("nomAdmin", nomAdmin);
         modelMap.put("ResponsableRegion", new ResponsableRegion());
         modelMap.put("listRespReg", responsableList);
         modelMap.put("listRegion", regionList);

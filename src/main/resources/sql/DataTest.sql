@@ -366,7 +366,7 @@ CREATE TABLE Administrateur(
     MotDePasse VARCHAR(100)
 );
 
-INSERT INTO Administrateur VALUES(null,"Sam-Koon","Mathieu","samkoonmatthieu@gmail.com","123456"),
+INSERT INTO Administrateur VALUES(null,"Mathieu","Admin","samkoonmatthieu@gmail.com","123456"),
 (null,"Christian","Mandresy","christianmandresy@gmail.com","987654");
 
 create view SignalEtRegion as
