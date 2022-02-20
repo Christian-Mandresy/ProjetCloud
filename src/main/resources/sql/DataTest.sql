@@ -356,6 +356,24 @@ insert into Region values(null,"Diana"),
                          (null,"Androy");
 
 
+create table roles(
+                      id integer primary key not null AUTO_INCREMENT,
+                      Name VARCHAR(25)
+);
+
+INSERT INTO roles(name) VALUES('ROLE_USER');
+INSERT INTO roles(name) VALUES('ROLE_ADMIN');
+
+
+create table user_roles(
+    user_id integer,
+    role_id integer,
+    FOREIGN KEY (user_id) REFERENCES utilisateur(IdUtilisateur),
+    FOREIGN KEY (role_id) REFERENCES roles(id)
+);
+
+
+
 create view SignalEtRegion as
 select DISTINCT sig.IdSignalement, IdUtilisateur, IdType, IdStatus, DescriptionSignalement, Longitude, Latitude, DateHeureSignalement,sigR.IdRegion,region.NomRegion
 from signalement as sig

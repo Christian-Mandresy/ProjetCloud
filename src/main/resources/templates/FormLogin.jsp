@@ -4,7 +4,7 @@
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<sf:form method="POST" modelAttribute="Utilisateur" action="http://localhost:8080/backoffice_war_exploded/Login">
+<sf:form method="POST" modelAttribute="Utilisateur" action="http://localhost:8080/backoffice_war/Login">
     <fieldset>
         <table>
             <tr>

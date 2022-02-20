@@ -63,5 +63,10 @@ public class ResponsableRegionDaoImpl implements ResponsableRegionDao{
 
     }
 
+    @Override
+    public void UpdateRespRegion(int idResponsable, int idRegion, String nom, String prenom, String email, String motDePasse) {
+
+    }
+
 
 }

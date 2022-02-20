@@ -521,7 +521,7 @@
                                                 </thead>
                                                 <tbody style="width:50px">
                                                     <c:forEach items="${requestScope.listRespReg}" var="respReg">
-                                                        <sf:form method="POST" modelAttribute="ResponsableRegion" action="http://localhost:8081/backoffice/UpdateRespReg">
+                                                        <sf:form method="POST" modelAttribute="ResponsableRegion" action="http://localhost:8080/backoffice_war/UpdateRespReg">
                                                             <tr>
                                                                 <td>
                                                                     <sf:input path="IdResponsable" name="IdResponsable" type="hidden" value="${respReg.getIdResponsable()}" style="width:100px;border:none;background:transparent;"/>

@@ -8,4 +8,8 @@ public interface UtilisateurService {
     List getAllUtilisateur();
 
     Utilisateur getUtilisateur(String user, String mdp);
+
+    void save(Utilisateur utilisateur);
+
+    Utilisateur getUtilisateurByName(String name);
 }

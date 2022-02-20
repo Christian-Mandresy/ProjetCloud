@@ -8,4 +8,8 @@ public interface UtilisateurDao {
     List getAllUtilisateur();
 
     Utilisateur getUtilisateur(String util, String mdp);
+
+    Utilisateur getUtilisateurByName(String util);
+
+    void save(Utilisateur utilisateur);
 }

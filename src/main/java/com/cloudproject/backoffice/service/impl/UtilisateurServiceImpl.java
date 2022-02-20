@@ -29,4 +29,16 @@ public class UtilisateurServiceImpl implements UtilisateurService {
     {
         return utilisateurDao.getUtilisateur(user,mdp);
     }
+
+    @Override
+    public void save(Utilisateur utilisateur)
+    {
+        utilisateurDao.save(utilisateur);
+    }
+
+    @Override
+    public Utilisateur getUtilisateurByName(String name)
+    {
+        return utilisateurDao.getUtilisateurByName(name);
+    }
 }

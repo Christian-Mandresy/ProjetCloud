@@ -12,4 +12,6 @@ public interface SignalementDao {
     Signalement getSign(int id);
 
     List getSignRegion(int IdRegion);
+
+    List getSignUser(int idUser);
 }

@@ -1,9 +1,12 @@
 package com.cloudproject.backoffice.model;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.HashSet;
+import java.util.Set;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -36,7 +39,7 @@ public class Utilisateur {
     @Column(name = "Email")
     private String Email;
 
-    @NotBlank
+    @NotEmpty
     @Column(name = "MotDePasse")
     private String MotDePasse;
 
@@ -46,8 +49,19 @@ public class Utilisateur {
     @Column(name = "Contact")
     private String Contact;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(  name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
+
     public Utilisateur() {
 
+    }
+
+    public Utilisateur(String email, String motDePasse) {
+        Email = email;
+        MotDePasse = motDePasse;
     }
 
     public Utilisateur(Integer IdUtilisateur, String Nom, String Prenom, Timestamp DateNaissance, String Email, String MotDePasse, String Sexe, String Contact) {
@@ -125,4 +139,11 @@ public class Utilisateur {
         this.Contact = Contact;
     }
 
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
 }

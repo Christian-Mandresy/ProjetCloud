@@ -13,7 +13,8 @@ import com.cloudproject.backoffice.service.StatistiqueCriteriaRegionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
- import org.springframework.stereotype.Controller;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -41,9 +42,18 @@ public class SignalementRestController {
         }
 
     @GetMapping(value = "/signalements/{IdRegion}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Collection<Signalement>> getSignRegion(@PathVariable("IdRegion") String Id) {
         int IdRegion=Integer.parseInt(Id.substring(11));
         Collection<Signalement> signal = signalementService.getSignRegion(IdRegion);
+        return new ResponseEntity<Collection<Signalement>>(signal, HttpStatus.FOUND);
+    }
+
+    @GetMapping(value = "/signalements/user/{IdUser}")
+    @PreAuthorize("hasRole('USER')")
+    public ResponseEntity<Collection<Signalement>> getSignUser(@PathVariable("IdUser") String Id) {
+        int IdRegion=Integer.parseInt(Id);
+        Collection<Signalement> signal = signalementService.getSignUser(IdRegion);
         return new ResponseEntity<Collection<Signalement>>(signal, HttpStatus.FOUND);
     }
 
