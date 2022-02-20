@@ -1,0 +1,34 @@
+body{
+  background-color: black;
+}
+.header{
+  display: grid;
+  grid-area: header;
+  background-color: black;
+}
+.main{
+  display: grid;
+  grid-area: main;
+  background-color: white;
+}
+#map{
+  display: grid;
+  grid-area: Ent;
+  background-color: white;
+}
+.footer{
+  display: grid;
+  grid-area: footer;
+  background-color: white;
+}
+
+.container{
+  display: grid;
+  grid-template-rows: 75px 500px 75px;
+  grid-template-columns: 40% 10% 25% 25%;
+  grid-template-areas: "header header header header"
+                       "main Ent Ent Ent"
+                       "footer footer footer footer";
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+}

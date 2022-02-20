@@ -1,0 +1,17 @@
+
+.log{
+  display: grid;
+  grid-area: log;
+  background-color: white;
+}
+
+.container{
+  display: grid;
+  grid-template-rows: 75px 500px 75px;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-areas: ". . ."
+                       ". log . "
+                       ". . . ";
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
